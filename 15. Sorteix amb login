@@ -1,0 +1,36 @@
+registrat = False
+nom = ""
+contrasenya = ""
+nombre_preferit = ""
+
+while not registrat:
+    print("1º Pas: Registra't per a la loteria")
+    nom = input("Introdueix el teu nom: ")
+    print("2º Pas: Crea una contasenya:")
+    contrasenya = input("")
+    print("3º Pas: Introdueix el teu nombre preferit amb una lletre:")
+    nombre_preferit = input("")
+    contrasenya = contrasenya + nom + nombre_preferit  
+    print("Registre exitós. La teva nova contrasenya és:", contrasenya)
+    registrat = True
+
+while True:
+    password = input("Introdueix la teva contrasenya per accedir: ")
+    if password == contrasenya:
+        print("Accés")
+        break
+    else:
+        print("Error")
+
+#Part extra
+n = input("Quin es el teu nombre de loterìa: ")
+
+if int(n) in (2342, 9345, 4444, 1234, 2345, 6978, 1111, 2222, 1357):
+    print("Felicitats")
+    
+elif n == "0000":
+    print("Premi gros")
+    
+else:
+    print("Per la propera vegada tindràs més sort")
+

@@ -1,0 +1,8 @@
+import random
+
+comemça = random.randint(0, 1)
+
+if comemça == random:
+    print('Ha guanyat el número 0')
+else:
+    print('Ha guanyat el número 1')

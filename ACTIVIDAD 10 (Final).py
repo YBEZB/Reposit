@@ -2,9 +2,8 @@ print ("------------------------------------------------------------------------
 print("Introdueix les dades per veure quin equip té més probabilitats de guanyar el partit")
 print ("----------------------------------------------------------------------------------------")
 
-
 def validar_equip(equip):
-    if equip.isalpha():
+    if equip.isalpha():  
         return equip
     else:
         print(f"ERROR")
@@ -18,7 +17,6 @@ def validar_nivell_joc(nivell_joc):
         print(f"ERROR")
         return input("Nivell de joc (alt, mitjà, baix): ")
 
-
 def validar_sn(resposta):
     opcions_valides = ["sí", "no"]
     if resposta.lower() in opcions_valides:
@@ -26,14 +24,16 @@ def validar_sn(resposta):
     else:
         print(f"ERROR")
         return input("¿Juga a casa? (sí/no): ")
-
+    
 def validar_enter(valor):
     try:
         return int(valor)
     except ValueError:
         print(f"ERROR")
-        return int(input("Nombre de partits guanyats: "))
+        return new_func()
 
+def new_func():
+    return int(input("Nombre de partits guanyats: "))
 
 equip1 = validar_equip(input("Introduïu el nom del primer equip: "))
 print ("------------------------------------")
@@ -52,8 +52,8 @@ print ("------------------------------------")
 gols_en_contra_equip1 = validar_enter(input("Gols en contra: "))
 print ("------------------------------------")
 jugadors_lesionats_equip1 = validar_enter(input("Nombre de jugadors lesionats: "))
-print ("=============================================================")
-print ("=============================================================")
+print ("=================================================================")
+print ("=================================================================")
 equip2 = validar_equip(input("Introduïu el nom del segon equip: "))
 print ("------------------------------------")
 nivell_joc_equip2 = validar_nivell_joc(input("Nivell de joc (alt, mitjà, baix): "))
@@ -117,8 +117,9 @@ print(f"La probabilitat d'empat entre {equip1} i {equip2} és: {empatats_equips}
 
 def guardar_dades(probabilitat_equip1, probabilitat_equip2, empatats_equips):
     with open("Dades_dels_equips.txt", "a") as file:
+        file.write(f"ACTIVITAT FINAL: -------------------------------------------\n")
+        file.write(f"\n")
         file.write(f"Les probabilitats dels equips són apartir de:\n")
-        file.writ(f"-------------------------------------------------------------------\n")
         file.write(f"El nivell de jugabilitat del {equip1} es {nivell_joc_equip1}\n")
         file.write(f"El nivell de jugabilitat del {equip2} es {nivell_joc_equip2}\n")
         file.write(f"El partits guanyats per {equip1} són {partits_guanyats_equip1}\n")
@@ -133,6 +134,6 @@ def guardar_dades(probabilitat_equip1, probabilitat_equip2, empatats_equips):
         file.write(f"{equip1}: {probabilitat_equip1}%\n")
         file.write(f"{equip2}: {probabilitat_equip2}%\n")
         file.write(f"Probabilitat d'empat: {empatats_equips}%\n")
-        file.write("-------------------------------------------------------------------\n")        
-guardar_dades(probabilitat_equip1, probabilitat_equip2,  empatats_equips)
-
+        file.write("-------------------------------------------------------------------\n")   
+        
+guardar_dades(probabilitat_equip1, probabilitat_equip2, empatats_equips)

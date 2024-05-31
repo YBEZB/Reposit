@@ -1,0 +1,52 @@
+#Exemple de diferents
+a=2
+
+b=2
+
+c=3
+
+d=4
+
+
+if a==b==c==d:
+
+      print ("Iguals")
+
+else:
+
+      print ("Diferents")
+      
+#Exemple de igualtat    
+a=2
+
+b=2
+
+c=2
+
+d=2
+
+
+if a==b==c==d:
+
+      print ("Iguals")
+
+else:
+
+      print ("Diferents")
+
+#Exemple de nombre superiors
+a=73
+
+b=52
+
+if a==b:
+
+        print ("Iguals")
+
+elif a>b:
+
+        print ("A es més gran")
+
+else:
+
+        print ("B es més gran")

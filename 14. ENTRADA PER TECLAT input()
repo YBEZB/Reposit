@@ -1,0 +1,17 @@
+#1ºPregunta 
+print("¿Com et dius?")
+
+nom = input()
+
+print("Hola", nom, "et faré una pregunta")
+
+#2ºPregunta 
+print("Has provat la pizza hawaiana?")
+
+text = input()
+
+if text == "si":
+    print("ok")
+    
+if text == "no":
+    print("Has de provar-la")

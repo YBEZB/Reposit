@@ -1,0 +1,7 @@
+lista = ["Chaoui Chefai Adam ","Flores Sánchez Marc ","GUARINO SALA DIEGO"]
+lista_ordenada = sorted(lista)
+
+for elemento in lista_ordenada:
+    print(elemento)
+
+

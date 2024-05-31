@@ -1,0 +1,9 @@
+horas = float(input("Introdueix les teves horas de traball: "))
+
+coste = float(input("Introduce lo que cobras per hora: "))
+
+paga = horas * coste
+paga = round(paga, 2)
+
+
+print("La teva paga es de:", paga)

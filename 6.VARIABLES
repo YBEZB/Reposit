@@ -1,0 +1,5 @@
+variable_A='Hola'
+
+variable_B='Juan'
+
+print (variable_A, variable_B)
